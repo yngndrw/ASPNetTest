@@ -4,4 +4,4 @@ WORKDIR /app
 #RUN ["dnu", "restore"]
 
 EXPOSE 5000
-ENTRYPOINT ["dnx", "./", "kestrel"]
+ENTRYPOINT ["dnx", "./src/ASPNetTest", "kestrel"]
