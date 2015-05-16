@@ -1,6 +1,6 @@
 FROM microsoft/aspnet:1.0.0-beta4
 
-RUN find . -name '*.json' | cpio -pdm /app
+RUN cp --parents -R ./**/*.json ./app/
 
 RUN find . -type f -name *.json
 
