@@ -2,7 +2,7 @@ FROM microsoft/aspnet:1.0.0-beta4
 
 COPY *.json */*.json */*/*.json /app/
 
-RUN ls -R
+RUN find . -type f -name *.json
 
 ADD . /app
 WORKDIR /app
