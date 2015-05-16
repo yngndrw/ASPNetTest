@@ -7,4 +7,4 @@ RUN dnu restore
 
 EXPOSE 5000
 ENV DNX_TRACE 1
-ENTRYPOINT dnx ./src/ASPNetTest kestrel
+ENTRYPOINT sleep 1000 | dnx ./src/ASPNetTest kestrel
