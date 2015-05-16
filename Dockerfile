@@ -5,7 +5,7 @@ RUN find . -type f -name *.json -exec cp {} /app ";"
 WORKDIR /app
 RUN dnu restore
 
-ADD .. .
+ADD . /app
 
 EXPOSE 5000
 ENV DNX_TRACE 1
