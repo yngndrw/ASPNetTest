@@ -1,9 +1,11 @@
 FROM microsoft/aspnet:1.0.0-beta4
 
-ADD . /app
-WORKDIR /app
-
+# Cache NuGet packages separately from the code
+COPY ./src/ASPNetTest/project.json ./app/
+WORKDIR ./app/
 RUN dnu restore
+
+COPY . ./app/
 
 EXPOSE 5000
 ENV DNX_TRACE 1
