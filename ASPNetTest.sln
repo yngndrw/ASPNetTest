@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{372E97D3-A060-4B08-BE48-BAE4B0FE20E6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9576952C-F6F6-476F-9668-977E351AE866}"
 	ProjectSection(SolutionItems) = preProject
+		CHECKS = CHECKS
+		Dockerfile = Dockerfile
 		global.json = global.json
 	EndProjectSection
 EndProject

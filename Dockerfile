@@ -1,10 +1,8 @@
-FROM microsoft/aspnet:1.0.0-beta5
+FROM microsoft/aspnet:1.0.0-rc1-update1
 
-ADD . ./app/
-WORKDIR ./app/
+COPY . /app
+WORKDIR /app
+RUN ["dnu", "restore"]
 
-RUN dnu restore
-
-EXPOSE 5000
-ENV DNX_TRACE 1
-ENTRYPOINT dnx ./src/ASPNetTest kestrel
+EXPOSE 5004
+ENTRYPOINT ["dnx", "-p", "project.json", "web"]
